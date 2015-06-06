@@ -1,6 +1,5 @@
 package it.ai.sa.challenge.board;
 
-import it.ai.sa.challenge.piece.AbstractPiece;
 
 public class ChessBoardPosition
 {

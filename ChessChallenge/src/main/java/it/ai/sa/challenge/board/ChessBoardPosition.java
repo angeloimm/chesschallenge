@@ -3,6 +3,7 @@ package it.ai.sa.challenge.board;
 
 public class ChessBoardPosition
 {
+	
 	private int row;
 	private int column;
 	public ChessBoardPosition(int row, int column)

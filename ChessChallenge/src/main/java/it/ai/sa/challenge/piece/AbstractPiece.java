@@ -6,16 +6,11 @@ public abstract class AbstractPiece
 	private PieceTypeEnum pieceType;
 	private int[][] piecePosition;
 	
-	public AbstractPiece(String name, PieceTypeEnum pieceType, int[][] piecePosition)
+	public AbstractPiece(String name, PieceTypeEnum pieceType)
 	{
 		super();
 		this.name = name;
 		this.pieceType = pieceType;
-		this.piecePosition = piecePosition;
-	}
-	public AbstractPiece()
-	{
-		super();
 	}
 	public String getName()
 	{
@@ -40,5 +35,10 @@ public abstract class AbstractPiece
 	public void setPiecePosition(int[][] piecePosition)
 	{
 		this.piecePosition = piecePosition;
+	}
+	@Override
+	public String toString()
+	{
+		return "AbstractPiece [name=" + name + ", pieceType=" + pieceType + "]";
 	}
 }

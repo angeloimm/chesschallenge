@@ -56,6 +56,9 @@ public class ChessBoard
 	{
 		this.pieces = pieces;
 	}
-
-	
+	@Override
+	public String toString()
+	{
+		return "ChessBoard [row=" + row + ", columns=" + columns + ", pieces=" + pieces + "]";
+	}
 }

@@ -8,6 +8,7 @@ public class ChessBoard
 {
 	private int row;
 	private int columns;
+	private int[][] possiblePiecesPositions;
 	private List<AbstractPiece> pieces;
 	
 	public ChessBoard()
@@ -21,6 +22,15 @@ public class ChessBoard
 		this.row = row;
 		this.columns = columns;
 		this.pieces = pieces;
+		possiblePiecesPositions = new int[row][columns]; 
+	}
+	public int[][] getPossiblePiecesPositions()
+	{
+		return possiblePiecesPositions;
+	}
+	public void setPossiblePiecesPositions(int[][] possiblePiecesPositions)
+	{
+		this.possiblePiecesPositions = possiblePiecesPositions;
 	}
 	public int getRow()
 	{
@@ -46,4 +56,6 @@ public class ChessBoard
 	{
 		this.pieces = pieces;
 	}
+
+	
 }

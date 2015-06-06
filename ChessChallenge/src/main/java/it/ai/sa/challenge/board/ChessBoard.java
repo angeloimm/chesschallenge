@@ -2,15 +2,15 @@ package it.ai.sa.challenge.board;
 
 import it.ai.sa.challenge.piece.AbstractPiece;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChessBoard
 {
 	private int row;
 	private int columns;
-	private int[][] possiblePiecesPositions;
 	private List<AbstractPiece> pieces;
-	
+	private List<ChessBoardPosition> possiblePiecesPositions;
 	public ChessBoard()
 	{
 		
@@ -22,16 +22,16 @@ public class ChessBoard
 		this.row = row;
 		this.columns = columns;
 		this.pieces = pieces;
-		possiblePiecesPositions = new int[row][columns]; 
+		possiblePiecesPositions = new ArrayList<ChessBoardPosition>();
+		for(int i = 0; i < row; i++)
+		{
+			for(int j= 0; j<columns; j++)
+			{
+				possiblePiecesPositions.add(new ChessBoardPosition((i+1), (j+1)));
+			}
+		}
 	}
-	public int[][] getPossiblePiecesPositions()
-	{
-		return possiblePiecesPositions;
-	}
-	public void setPossiblePiecesPositions(int[][] possiblePiecesPositions)
-	{
-		this.possiblePiecesPositions = possiblePiecesPositions;
-	}
+
 	public int getRow()
 	{
 		return row;
@@ -56,9 +56,18 @@ public class ChessBoard
 	{
 		this.pieces = pieces;
 	}
+	
+	public List<ChessBoardPosition> getPossiblePiecesPositions()
+	{
+		return possiblePiecesPositions;
+	}
+	public void setPossiblePiecesPositions(List<ChessBoardPosition> possiblePiecesPositions)
+	{
+		this.possiblePiecesPositions = possiblePiecesPositions;
+	}
 	@Override
 	public String toString()
 	{
-		return "ChessBoard [row=" + row + ", columns=" + columns + ", pieces=" + pieces + "]";
+		return "ChessBoard [row=" + row + ", columns=" + columns + ", pieces=" + pieces + ", possiblePiecesPositions=" + possiblePiecesPositions + "]";
 	}
 }

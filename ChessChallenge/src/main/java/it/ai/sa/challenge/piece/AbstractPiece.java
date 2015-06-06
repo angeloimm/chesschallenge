@@ -1,10 +1,13 @@
 package it.ai.sa.challenge.piece;
 
+import it.ai.sa.challenge.board.ChessBoardPosition;
+
 public abstract class AbstractPiece
 {
 	private String name;
 	private PieceTypeEnum pieceType;
-	private int[][] piecePosition;
+	private ChessBoardPosition piecePosition;
+	
 	
 	public AbstractPiece(String name, PieceTypeEnum pieceType)
 	{
@@ -28,17 +31,15 @@ public abstract class AbstractPiece
 	{
 		this.pieceType = pieceType;
 	}
-	public int[][] getPiecePosition()
+	
+	public ChessBoardPosition getPiecePosition()
 	{
 		return piecePosition;
 	}
-	public void setPiecePosition(int[][] piecePosition)
+	public void setPiecePosition(ChessBoardPosition piecePosition)
 	{
 		this.piecePosition = piecePosition;
 	}
-	
-	
-	
 	@Override
 	public int hashCode()
 	{
@@ -71,6 +72,7 @@ public abstract class AbstractPiece
 	@Override
 	public String toString()
 	{
-		return "AbstractPiece [name=" + name + ", pieceType=" + pieceType + "]";
+		return "AbstractPiece [name=" + name + ", pieceType=" + pieceType + ", piecePosition=" + piecePosition + "]";
 	}
+
 }

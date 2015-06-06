@@ -15,6 +15,13 @@
 	<groupId>it.ai.sa.challenge.chess</groupId>
 	<artifactId>ChessCallenge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<developers>
+		<developer>
+			<name>Angelo Immediata</name>
+			<email>angeloimm@gmail.com</email>
+			<timezone>+2</timezone>
+		</developer>
+	</developers>
 	<dependencies>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>

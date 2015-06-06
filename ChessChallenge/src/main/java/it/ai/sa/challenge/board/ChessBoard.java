@@ -12,6 +12,7 @@ public class ChessBoard
 	
 	public ChessBoard()
 	{
+		
 		super();
 	}
 	public ChessBoard(int row, int columns, List<AbstractPiece> pieces)

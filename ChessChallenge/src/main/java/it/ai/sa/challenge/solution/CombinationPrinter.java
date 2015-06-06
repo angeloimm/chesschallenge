@@ -1,5 +1,6 @@
 package it.ai.sa.challenge.solution;
 
+import it.ai.sa.challenge.board.ChessBoard;
 import it.ai.sa.challenge.piece.AbstractPiece;
 import it.ai.sa.challenge.piece.Bishop;
 import it.ai.sa.challenge.piece.King;
@@ -73,7 +74,8 @@ public class CombinationPrinter
 				{
 					boardPieces.addAll(this.createBoardPieces(rookNumber, PieceTypeEnum.ROOK));
 				}
-
+				ChessBoard cb = new ChessBoard(boardRow, boardColumns, boardPieces);
+				logger.info(cb.toString());
 			}
 			long finalTime = System.currentTimeMillis();
 			if( logger.isInfoEnabled() )

@@ -7,6 +7,7 @@
   </appender>
  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>chessChallengeAngImm.log</file>
+    
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <fileNamePattern>chessChallengeAngImm.%d{yyyy-MM-dd}.log</fileNamePattern>
       <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
